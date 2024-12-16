@@ -22,9 +22,9 @@ export default {
         border: "hsl(var(--border))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        vacation: {
-          start: "#FEC6A1",
-          end: "#FFDEE2",
+        christmas: {
+          red: "#E5DEFF",
+          green: "#FFDEE2",
         },
       },
       keyframes: {
@@ -42,10 +42,16 @@ export default {
             "background-position": "right center",
           },
         },
+        "snowfall": {
+          "0%": { transform: "translateY(-10px)", opacity: "0" },
+          "50%": { opacity: "0.5" },
+          "100%": { transform: "translateY(10px)", opacity: "0" },
+        },
       },
       animation: {
         "number-spin": "number-spin 0.5s ease-out",
         "gradient-shift": "gradient-shift 15s ease infinite",
+        "snowfall": "snowfall 3s ease-in-out infinite",
       },
     },
   },

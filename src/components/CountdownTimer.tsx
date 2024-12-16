@@ -31,29 +31,29 @@ const CountdownTimer = () => {
   }, []);
 
   const getMessage = () => {
-    if (timeLeft.days > 5) return "The anticipation builds...";
-    if (timeLeft.days > 2) return "Getting closer!";
-    if (timeLeft.days > 0) return "Almost there!";
+    if (timeLeft.days > 5) return "The magic of Christmas is coming...";
+    if (timeLeft.days > 2) return "Almost time for holiday cheer!";
+    if (timeLeft.days > 0) return "Christmas is just around the corner!";
     if (timeLeft.days === 0 && (timeLeft.hours > 0 || timeLeft.minutes > 0 || timeLeft.seconds > 0)) 
-      return "Just a few moments now!";
-    return "Time to go! ✈️";
+      return "Santa is on his way! 🎅";
+    return "Merry Christmas! 🎄";
   };
 
   const TimeUnit = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center mx-4">
-      <div className="text-4xl md:text-6xl font-bold mb-2 overflow-hidden">
+      <div className="text-4xl md:text-6xl font-bold mb-2 overflow-hidden bg-white/50 rounded-lg px-6 py-3 shadow-lg">
         <span className="inline-block animate-number-spin">
           {value.toString().padStart(2, "0")}
         </span>
       </div>
-      <div className="text-sm md:text-base text-gray-600">{label}</div>
+      <div className="text-sm md:text-base text-gray-700 font-medium">{label}</div>
     </div>
   );
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <h2 className="text-2xl md:text-3xl mb-8 text-gray-700">{getMessage()}</h2>
-      <div className="flex flex-row justify-center items-center">
+      <h2 className="text-2xl md:text-3xl mb-8 text-gray-800 font-medium">{getMessage()}</h2>
+      <div className="flex flex-row justify-center items-center flex-wrap gap-4">
         <TimeUnit value={timeLeft.days} label="days" />
         <TimeUnit value={timeLeft.hours} label="hours" />
         <TimeUnit value={timeLeft.minutes} label="minutes" />
