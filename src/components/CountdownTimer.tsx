@@ -10,7 +10,7 @@ interface TimeLeft {
 
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-  const targetDate = new Date("2024-04-17T17:00:00+02:00"); // Stockholm time (UTC+2)
+  const targetDate = new Date("2024-12-18T13:00:00+02:00"); // Stockholm time (UTC+2)
 
   useEffect(() => {
     const calculateTimeLeft = () => {
