@@ -20,6 +20,8 @@ export default {
     extend: {
       colors: {
         border: "hsl(var(--border))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
         vacation: {
           start: "#FEC6A1",
           end: "#FFDEE2",
