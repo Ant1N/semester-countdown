@@ -31,12 +31,11 @@ const CountdownTimer = () => {
   }, []);
 
   const getMessage = () => {
-    if (timeLeft.days > 5) return "The magic of Christmas is coming...";
-    if (timeLeft.days > 2) return "Almost time for holiday cheer!";
-    if (timeLeft.days > 0) return "Christmas is just around the corner!";
+    if (timeLeft.days > 2) return "Nu kan jag känna det!";
+    if (timeLeft.days > 0) return "Det luktar kalsonger under täcket i tre veckor";
     if (timeLeft.days === 0 && (timeLeft.hours > 0 || timeLeft.minutes > 0 || timeLeft.seconds > 0)) 
-      return "Santa is on his way! 🎅";
-    return "Merry Christmas! 🎄";
+      return "Byxorna åker av";
+    return "Seeeemester!!!";
   };
 
   const TimeUnit = ({ value, label }: { value: number; label: string }) => (

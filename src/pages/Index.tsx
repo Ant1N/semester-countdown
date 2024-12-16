@@ -20,7 +20,7 @@ const Index = () => {
       
       <div className="w-full max-w-4xl p-8 rounded-xl backdrop-blur-sm bg-white/30 shadow-xl">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-12">
-          Christmas Countdown
+          BBQnet semester countdown
         </h1>
         <CountdownTimer />
       </div>
